@@ -53,6 +53,15 @@ def pole_kwadratu(a):
 def zakup (produkt, cena, ilosc):
     koszt = cena * ilosc
     print (f"Produkt: {produkt} kosztuje: {koszt:.2f}")
+class Samochod:
+    def __init__(self,marka,model):
+        self.marka = marka
+        self.model = model
+        self.przebieg = 0
+
+    def jedz (self,kilometry):
+        self.przebieg += kilometry
+
 if __name__ == '__main__':
     print_hi('PyCharm')
     pole_kola(5)
@@ -90,4 +99,35 @@ if __name__ == '__main__':
     zbiory2 = {"kino", "bieganie"}
     print(zbiory1 & zbiory2)
     print(zbiory1 - zbiory2)
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    pies = {r"""
+     / \__
+    (    @\___
+     /         O
+    /   (_____/
+    /_____/   U
+    """}
+
+    kot = {r"""
+     /\_/\
+    ( o.o )
+     > ^ <
+    """}
+
+    przepiorka = {r"""
+           __
+      ____ (o)>
+     /       /
+    /_______/
+       /  /
+    """}
+    zwierzeta = ["kot", "pies", "kot","przepiorka"]
+    zbiory = {"kot": kot, "pies": pies, "przepiorka" : przepiorka}
+
+    symbole = set()
+    for zwierze in zwierzeta:
+        symbole.update(zbiory[zwierze])
+
+    for symbol in sorted(symbole):
+        print(symbol)
+
+    print("Liczba różnych symboli:", len(symbole))
