@@ -62,4 +62,32 @@ if __name__ == '__main__':
     temperatura(100)
     pole_kwadratu(4)
     zakup ("Chleb", 3.5, 3)
+    owoce = ["jabłko", "banan", "gruszka"]
+    owoce.append ("gruszka")
+    owoce.insert(1, "pomarańcza")
+    owoce.remove("banan")
+    owoce.pop()
+    print(f"{owoce}")
+    lista1 = ["mail","raport", "telefon"]
+    lista1.remove("mail")
+    lista1.insert(0, "pilne")
+    print (f"{lista1}")
+    lista2 = [12,8,15]
+    lista2.append(10)
+    lista2.remove(min(lista2))
+    lista2.sort(reverse=True)
+    print(f"{lista2}")
+    student = {"imie": "Jan", "oceny" : [4,5,3]}
+    print(student["imie"])
+    print(student.get("telefon","brak"))
+    student ["wiek"] = 20
+    x,y = (52.23,21.01)
+    a = {1,2,3,4}
+    b = {3,4,5,6}
+    print(a & b)
+    print (a - b)
+    zbiory1 = {"rower", "kino"}
+    zbiory2 = {"kino", "bieganie"}
+    print(zbiory1 & zbiory2)
+    print(zbiory1 - zbiory2)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
