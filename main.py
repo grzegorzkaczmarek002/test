@@ -3,6 +3,8 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import math
+from contextlib import nullcontext
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -61,6 +63,23 @@ class Samochod:
 
     def jedz (self,kilometry):
         self.przebieg += kilometry
+class Student:
+    def __init__(self,imie, nazwisko, oceny):
+        self.imie = imie
+        self.nazwisko = nazwisko
+        self.oceny = oceny.copy()
+
+    def srednia_ocen (self):
+        if len(self.oceny) == 0:
+            return "NONE"
+        srednia = 0
+        liczba_ocen = len(self.oceny)
+        for ocena in self.oceny:
+            srednia += ocena
+        srednia = srednia / liczba_ocen
+        return srednia
+
+
 
 if __name__ == '__main__':
     print_hi('PyCharm')
@@ -131,3 +150,7 @@ if __name__ == '__main__':
         print(symbol)
 
     print("Liczba różnych symboli:", len(symbole))
+
+    student = Student("Jan", "Kowalski", [4, 5, 3])
+    srednia_ocen = student.srednia_ocen()
+    print(f"{srednia_ocen}")
